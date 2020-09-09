@@ -33,7 +33,7 @@ export default function Search() {
   }
 
   return (
-    <div className="search" ref={searchRef}>
+    <div className="search-box" ref={searchRef}>
       <input
         type="text"
         id="search-input"
