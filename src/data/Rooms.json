@@ -3,7 +3,18 @@
     "name": "Coffee chat",
     "tables": [
       {
-        "name": "Ryan's Table",
+        "name": "Ryan's Coffee Table",
+        "topic": "Dragons",
+        "limit": 2,
+        "people": [
+          {
+            "name": "Ryan",
+            "interest": "React"
+          }
+        ]
+      },
+      {
+        "name": "Meghan's Coffee Table",
         "topic": "Dragons",
         "limit": 2,
         "people": [
@@ -16,10 +27,10 @@
     ]
   },
   {
-    "name": "Coffee chat",
+    "name": "Games chat",
     "tables": [
       {
-        "name": "Ryan's Table",
+        "name": "Ryan's Games Table",
         "topic": "Dragons",
         "limit": 2,
         "people": [
@@ -32,12 +43,51 @@
     ]
   },
   {
-    "name": "Lunch chat"
+    "name": "Lunch chat",
+    "tables": [
+      {
+        "name": "Ryan's Lunch Table",
+        "topic": "Dragons",
+        "limit": 2,
+        "people": [
+          {
+            "name": "Ryan",
+            "interest": "React"
+          }
+        ]
+      }
+    ]
   },
   {
-    "name": "The Pub"
+    "name": "The Pub",
+    "tables": [
+      {
+        "name": "Ryan's pub Table",
+        "topic": "Dragons",
+        "limit": 2,
+        "people": [
+          {
+            "name": "Ryan",
+            "interest": "React"
+          }
+        ]
+      }
+    ]
   },
   {
-    "name": "Help Desk"
+    "name": "Help Desk",
+    "tables": [
+      {
+        "name": "Help Table",
+        "topic": "Dragons",
+        "limit": 2,
+        "people": [
+          {
+            "name": "Ryan",
+            "interest": "React"
+          }
+        ]
+      }
+    ]
   }
 ]
