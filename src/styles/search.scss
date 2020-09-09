@@ -1,0 +1,30 @@
+.search {
+  height: 60px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#search-input.animate {
+  max-width: 100%;
+  border-bottom: black 1px solid;
+}
+
+#search-input {
+  padding: 0px;
+  border: none;
+  border-bottom: black 0px solid;
+  max-width: 0%;
+  transition: 0.5s;
+  overflow: hidden;
+}
+
+#search-input:focus {
+  outline: none;
+}
+
+.search-icon {
+  padding-left: 5px;
+}
