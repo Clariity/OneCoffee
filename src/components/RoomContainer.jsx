@@ -1,22 +1,18 @@
-import React, { useState } from 'react';
+import React from 'react';
 import TableContainer from './TableContainer';
 
 const RoomContainer = ({ room }) => {
-  const [drawerToggle, setDrawerToggle] = useState(false);
   return (
     <>
       <div className="RoomHeader dls-deep-blue-bg"/>
-      {room.name}
+      <div classname="row">
       {
-        drawerToggle && (
-          room.name.map(table => (
-            <>
-              {table.name}
-              <TableContainer className="dls-bright-blue-bg" table={table} />
-            </>
-          ))
+        room.tables && room.tables.map(table => (
+          <TableContainer className="dls-bright-blue-bg" table={table} />
+        )
         )
       }
+      </div>
     </>
   )
 };

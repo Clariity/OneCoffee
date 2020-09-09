@@ -1,10 +1,9 @@
 import React from 'react';
 
 const TableContainer = ({ table }) => (
-  <>
-  {table.name}
-  <div className="dls-gray-04-bg" />
-  </>
+  <div className="dls-gray-04-bg col-sm-4" >
+    {table.name}
+  </div>
 );
 
 export default TableContainer;
