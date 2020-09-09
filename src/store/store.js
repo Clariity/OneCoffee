@@ -13,7 +13,7 @@ const intialState = {
   firebaseApp: firebase,
   user: null,
   title: "Home",
-  roomData: {},
+  roomData: [],
   authLoaded: false,
 };
 const StoreContext = React.createContext(intialState);

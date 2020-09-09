@@ -15,7 +15,7 @@ export default function Navbar() {
         <div className="col-xs-8 search">
           <Search />
           {state.user !== null && (
-            <img className="navbar-image" src={state.user.photoURL} alt="google photo url" />
+            <img className="navbar-image" src={state.user.photoURL} alt="google personal" />
           )}
         </div>
       </div>

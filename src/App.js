@@ -23,10 +23,12 @@ function App() {
       var unregisterChangeObserver = state.firebaseApp
         .firestore()
         .collection("rooms")
-        .doc("all-rooms")
-        .onSnapshot(function (doc) {
-          console.log("Current data: ", doc.data());
-          dispatch({ type: ActionType.SET_ROOM_DATA, payload: doc.data() });
+        .onSnapshot(function (snapshot) {
+          let rooms = [];
+          snapshot.forEach(function (doc) {
+            rooms.push(doc.data());
+          });
+          dispatch({ type: ActionType.SET_ROOM_DATA, payload: rooms });
         });
       return unregisterChangeObserver;
     }
