@@ -1,0 +1,43 @@
+[
+  {
+    "name": "Coffee chat",
+    "tables": [
+      {
+        "name": "Ryan's Table",
+        "topic": "Dragons",
+        "limit": 2,
+        "people": [
+          {
+            "name": "Ryan",
+            "interest": "React"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Coffee chat",
+    "tables": [
+      {
+        "name": "Ryan's Table",
+        "topic": "Dragons",
+        "limit": 2,
+        "people": [
+          {
+            "name": "Ryan",
+            "interest": "React"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Lunch chat"
+  },
+  {
+    "name": "The Pub"
+  },
+  {
+    "name": "Help Desk"
+  }
+]
