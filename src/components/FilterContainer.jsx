@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 function handleRemoveFilterClick() {
     console.log("Remove this filter");
   }
