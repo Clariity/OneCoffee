@@ -63,10 +63,11 @@ export default function NewTableModal({ setShowNewTableModal, addTable }) {
 
       <div className="modal flex flex-align-center">
         <div className="container" role="dialog" ref={tableModalRef}>
-          <header className="flex flex-align-center dls-bright-blue-bg dls-white">
+          <header className="flex flex-align-center dls-dark-yellow-bg dls-white">
             <h2 className="fluid text-align-center heading-3">New Table</h2>
             <button
               className="glyph dls-glyph-close glyph-lg focus-light"
+              style={{ color: "#00165a" }}
               data-dismiss
               aria-label="Close"
               onClick={() => setShowNewTableModal(false)}
@@ -121,7 +122,7 @@ export default function NewTableModal({ setShowNewTableModal, addTable }) {
                   }`}
                   onClick={decrementSize}
                 />
-                <span style={{ padding: "5px" }}>{sizeLimit}</span>
+                <span style={{ padding: "5px", paddingLeft: "10px" }}>{sizeLimit}</span>
                 <i
                   className={`icon dls-icon-plus-circle icon-hover search-icon ${
                     sizeLimit > 7 && "disabled"
@@ -129,9 +130,14 @@ export default function NewTableModal({ setShowNewTableModal, addTable }) {
                   onClick={incrementSize}
                 />
               </div>
+              <br />
             </div>
             <div className="text-align-right-sm-up text-align-center-sm-down pad border-t pad-4-lr">
-              <button className="btn" onClick={handleCreateTable}>
+              <button
+                style={{ color: "#00165a" }}
+                className="btn dls-dark-yellow-bg"
+                onClick={handleCreateTable}
+              >
                 Create
               </button>
             </div>

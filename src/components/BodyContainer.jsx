@@ -23,11 +23,11 @@ const BodyContainer = () => {
   }
 
   return (
-    <div className="row">
-      <div className="col-lg-3 dls-gray-04-bg">
+    <div className="row pad-1-t">
+      <div className="col-lg-3">
         <div className="rooms flex flex-column">
-          <h3>
-            Rooms
+          <h3 className="pad-1 text-align-left flex" style={{ alignItems: "center" }}>
+            <span style={{ flexGrow: 1 }}>Rooms</span>
             <i
               className="icon dls-icon-plus-circle icon-hover search-icon"
               onClick={() => setShowNewTableModal(true)}
@@ -35,7 +35,7 @@ const BodyContainer = () => {
           </h3>
           {state.roomData.map((room, index) => (
             <button
-              className="btn btn-secondary"
+              className="btn btn-secondary margin-1-b"
               key={index + "-" + Math.random}
               onClick={() => setActiveRoom(room.name)}
             >
@@ -45,14 +45,14 @@ const BodyContainer = () => {
         </div>
 
         <div className="Table filters">
-          <h3>
-            Table Filters
+          <h3 className="pad-1 text-align-left flex" style={{ alignItems: "center" }}>
+            <span style={{ flexGrow: 1 }}>Table Filters</span>
             <i
               className="icon dls-icon-filter icon-hover search-icon"
               onClick={() => setShowFilterModal(true)}
             />
           </h3>
-
+          <p>No filters applied</p>
           {/*
             map over filtersData - (name, value)
             create a FilterContainer object for each of these
@@ -62,13 +62,15 @@ const BodyContainer = () => {
       </div>
 
       <div className="col-lg-9">
-        {activeRoom && state.roomData.find((room) => room.name === activeRoom).name}
-        <div className="dls-gray-01-bg">
-          <RoomContainer
-            className="dls-gray-01-bg"
-            room={state.roomData.find((room) => room.name === activeRoom)}
-          />
-        </div>
+        <h3>
+          {activeRoom
+            ? state.roomData.find((room) => room.name === activeRoom).name
+            : "Please select a room"}
+        </h3>
+        <RoomContainer
+          className="dls-gray-01-bg"
+          room={state.roomData.find((room) => room.name === activeRoom)}
+        />
       </div>
       {showFilterModal && <FilterModal setShowFilterModal={setShowFilterModal} />}
       {showNewTableModal && (
