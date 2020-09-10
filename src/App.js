@@ -13,7 +13,6 @@ function App() {
     var unregisterAuthObserver = state.firebaseApp.auth().onAuthStateChanged((user) => {
       dispatch({ type: ActionType.SET_AUTH_LOADED, payload: true });
       dispatch({ type: ActionType.SET_USER, payload: user });
-      console.log("User: ", user);
     });
     return unregisterAuthObserver;
   }, [dispatch, state.firebaseApp]);

@@ -1,18 +1,21 @@
-import React from "react";
+import React, { useContext } from "react";
 import TableContainer from "./TableContainer";
+import { StoreContext } from "../store/store";
 
-const RoomContainer = ({ room }) => {
+const RoomContainer = ({ roomIndex }) => {
+  const { state } = useContext(StoreContext);
   return (
     <>
       <div className="RoomHeader dls-deep-blue-bg" />
       <div className="row pad-1">
-        {room &&
-          room.tables &&
-          room.tables.map((table, index) => (
+        {state.roomData[roomIndex] &&
+          state.roomData[roomIndex].tables &&
+          state.roomData[roomIndex].tables.map((table, index) => (
             <TableContainer
               className="dls-bright-blue-bg"
               key={index + "-" + Math.random}
-              table={table}
+              roomIndex={roomIndex}
+              tableNumber={index}
             />
           ))}
       </div>
