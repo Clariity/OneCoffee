@@ -50,8 +50,10 @@ const BodyContainer = () => {
           />
         </div>
       </div>
-      <div className="col-lg-9">
-        {activeRoom && state.roomData.find((room) => room.name === activeRoom).name}
+      <div className="col-lg-9 dls-gray-01-bg pad-1">
+        <h1>
+          {activeRoom && state.roomData.find((room) => room.name === activeRoom).name}
+        </h1>
         <div className="dls-gray-01-bg">
           <RoomContainer
             className="dls-gray-01-bg"
