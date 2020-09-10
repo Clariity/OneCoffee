@@ -1,7 +1,6 @@
 import React, { useState, useContext } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import RoomContainer from "./RoomContainer";
-import FilterContainer from "./FilterContainer";
 import { StoreContext } from "../store/store";
 import FilterModal from "./modals/FilterModal";
 import NewTableModal from "./modals/NewTableModal";
