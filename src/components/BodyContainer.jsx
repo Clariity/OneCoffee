@@ -1,4 +1,5 @@
 import React, { useState, useContext } from "react";
+import { toast } from 'react-toastify';
 import RoomContainer from "./RoomContainer";
 import FilterContainer from "./FilterContainer";
 import { StoreContext } from "../store/store";
@@ -20,6 +21,15 @@ const BodyContainer = () => {
       tables: newTables,
     });
     setShowNewTableModal(false);
+    toast('Room added!', {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      });
   }
 
   return (
