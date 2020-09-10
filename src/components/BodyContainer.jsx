@@ -45,24 +45,22 @@ const BodyContainer = () => {
         </div>
 
         <div className="Table filters">
-        <h3>
+          <h3>
             Table Filters
             <i
-            className="icon dls-icon-filter icon-hover search-icon"
-            onClick={() => setShowFilterModal(true)}
-          />
-          </button>
-        </h3>
-           
-           {/*
+              className="icon dls-icon-filter icon-hover search-icon"
+              onClick={() => setShowFilterModal(true)}
+            />
+          </h3>
+
+          {/*
             map over filtersData - (name, value)
             create a FilterContainer object for each of these
             <FilterContainer />
            */}
-
         </div>
       </div>
-      
+
       <div className="col-lg-9">
         {activeRoom && state.roomData.find((room) => room.name === activeRoom).name}
         <div className="dls-gray-01-bg">

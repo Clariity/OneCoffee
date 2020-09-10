@@ -87,7 +87,7 @@ export default function NewTableModal({ setShowNewTableModal, addTable }) {
                 {state.roomData.map((room, index) => {
                   return (
                     <span key={index} className="radio-selection-item">
-                      <input type="radio" value={index + ":" + room.name} /> {room.name}
+                      <input type="radio" value={index + ":" + room.name} name="test" /> {room.name}
                     </span>
                   );
                 })}
@@ -95,22 +95,22 @@ export default function NewTableModal({ setShowNewTableModal, addTable }) {
               <h2 className="heading-5 margin-3-b text-align-left pad-3-t">Location</h2>
               <div style={{ textAlign: "left" }} onChange={handleRadioLocationChange}>
                 <span className="radio-selection-item">
-                  <input type="radio" value="London" /> London
+                  <input type="radio" value="London" name="test" /> London
                 </span>
                 <span className="radio-selection-item">
-                  <input type="radio" value="New York" /> New York
+                  <input type="radio" value="New York" name="test" /> New York
                 </span>
                 <span className="radio-selection-item">
-                  <input type="radio" value="Brighton" /> Brighton
+                  <input type="radio" value="Brighton" name="test" /> Brighton
                 </span>
                 <span className="radio-selection-item">
-                  <input type="radio" value="Burgess Hill" /> Burgess Hill
+                  <input type="radio" value="Burgess Hill" name="test" /> Burgess Hill
                 </span>
                 <span className="radio-selection-item">
-                  <input type="radio" value="Phoenix" /> Phoenix
+                  <input type="radio" value="Phoenix" name="test" /> Phoenix
                 </span>
                 <span className="radio-selection-item">
-                  <input type="radio" value="India" /> India
+                  <input type="radio" value="India" name="test" /> India
                 </span>
               </div>
               <h2 className="heading-5 margin-3-b text-align-left pad-3-t">Size Limit</h2>
