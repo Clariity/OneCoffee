@@ -1,7 +1,8 @@
 import React, { useRef, useEffect } from 'react';
+import createWebexMeeting from '../api/createMeetingUtil';
 
 const TableContainer = ({ table }) => {
-  const pushToWebex = () => window.alert("Pushing to webex");
+  const pushToWebex = () => createWebexMeeting();
   const buttonDisabled = useRef(null);
   useEffect(() => {
     table.limit <= table.people.length
