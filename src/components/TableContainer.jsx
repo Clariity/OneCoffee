@@ -23,6 +23,7 @@ const TableContainer = ({ roomIndex, tableNumber }) => {
     state.firebaseApp.firestore().collection("rooms").doc(room.name).update({
       tables: newTables,
     });
+    window.open(table.link, "_blank");
   }
 
   return (
