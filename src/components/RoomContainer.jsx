@@ -5,7 +5,7 @@ const RoomContainer = ({ room }) => {
   return (
     <>
       <div className="RoomHeader dls-deep-blue-bg" />
-      <div className="row">
+      <div className="row pad-1">
         {room &&
           room.tables &&
           room.tables.map((table, index) => (
