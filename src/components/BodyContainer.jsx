@@ -1,5 +1,6 @@
 import React, { useState, useContext } from "react";
 import RoomContainer from "./RoomContainer";
+import FilterContainer from "./FilterContainer";
 import { StoreContext } from "../store/store";
 
 const BodyContainer = () => {
@@ -10,7 +11,12 @@ const BodyContainer = () => {
     <div className="row">
       <div className="col-lg-3 dls-gray-04-bg">
         <div className="rooms flex flex-column">
-          Rooms
+          <h3>
+            Rooms
+            <button class="btn-tertiary btn-icon btn-sm dls-icon-plus-circle margin-1-r">
+          </button>
+          </h3>
+
           {state.roomData.map((room, index) => (
             <button
               className="btn btn-secondary"
@@ -21,8 +27,23 @@ const BodyContainer = () => {
             </button>
           ))}
         </div>
-        <div className="Table filters">Table filters</div>
+
+        <div className="Table filters">
+        <h3>
+            Table Filters
+            <button class="btn-tertiary btn-icon btn-sm dls-icon-filter margin-1-r">
+          </button>
+        </h3>
+           
+           {/*
+            map over filtersData - (name, value)
+            create a FilterContainer object for each of these
+            <FilterContainer />
+           */}
+
+        </div>
       </div>
+      
       <div className="col-lg-9">
         {activeRoom && state.roomData.find((room) => room.name === activeRoom).name}
         <div className="dls-gray-01-bg">
