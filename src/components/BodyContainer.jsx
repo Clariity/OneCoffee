@@ -5,6 +5,7 @@ import FilterContainer from "./FilterContainer";
 import { StoreContext } from "../store/store";
 import FilterModal from "./modals/FilterModal";
 import NewTableModal from "./modals/NewTableModal";
+import "react-toastify/dist/ReactToastify.css";
 
 const BodyContainer = () => {
   const { state } = useContext(StoreContext);
