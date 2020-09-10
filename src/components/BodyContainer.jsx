@@ -7,7 +7,7 @@ import NewTableModal from "./modals/NewTableModal";
 
 const BodyContainer = () => {
   const { state } = useContext(StoreContext);
-  const [activeRoom, setActiveRoom] = useState();
+  const [activeRoom, setActiveRoom] = useState(null);
   const [showFilterModal, setShowFilterModal] = useState(false);
   const [showNewTableModal, setShowNewTableModal] = useState(false);
 
@@ -37,7 +37,7 @@ const BodyContainer = () => {
             <button
               className="btn btn-secondary margin-1-b"
               key={index + "-" + Math.random}
-              onClick={() => setActiveRoom(room.name)}
+              onClick={() => setActiveRoom(index)}
             >
               {room.name}
             </button>
@@ -62,15 +62,8 @@ const BodyContainer = () => {
       </div>
 
       <div className="col-lg-9">
-        <h3>
-          {activeRoom
-            ? state.roomData.find((room) => room.name === activeRoom).name
-            : "Please select a room"}
-        </h3>
-        <RoomContainer
-          className="dls-gray-01-bg"
-          room={state.roomData.find((room) => room.name === activeRoom)}
-        />
+        <h3>{activeRoom !== null ? state.roomData[activeRoom].name : "Please select a room"}</h3>
+        <RoomContainer className="dls-gray-01-bg" roomIndex={activeRoom} />
       </div>
       {showFilterModal && <FilterModal setShowFilterModal={setShowFilterModal} />}
       {showNewTableModal && (
