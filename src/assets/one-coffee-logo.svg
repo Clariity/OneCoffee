@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="140px" height="140px" viewBox="0 0 140 140" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 56.3 (81716) - https://sketch.com -->
+    <title>Artboard</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <circle id="Oval" cx="108.5" cy="87.5" r="10.5"></circle>
+        <path d="M110.178538,58.9985831 C114.880202,58.9985831 116.179021,62.104722 116.179021,68 C116.179021,96.7187732 93.9573832,120 68,120 C42.0426168,120 21,96.718807 21,68 C21,64.9301309 21,58.9985831 24.6669712,58.9985831 C81.6746824,58.9985831 110.178538,58.9985831 110.178538,58.9985831 Z" id="Path" fill="#00165A"></path>
+        <path d="M34.71875,120 L100.65625,120" id="Line" stroke="#00165A" stroke-width="5" stroke-linecap="round"></path>
+        <ellipse id="Oval" stroke="#00165A" stroke-width="7" cx="102.5" cy="87.5" rx="16.5" ry="15.5"></ellipse>
+        <path d="M47.1606019,20 C51.1262576,24.0269157 52.7305153,27.7722584 51.9733749,31.2360282 C51.03717,35.5189839 45.9135689,34.9048301 44.3968266,40.8340058 C43.3856651,44.7867896 44.3069236,48.842121 47.1606019,53" id="Line-2" stroke="#FDB92D" stroke-width="5" stroke-linecap="round"></path>
+        <path d="M89.1606019,20 C93.1262576,24.0269157 94.7305153,27.7722584 93.9733749,31.2360282 C93.03717,35.5189839 87.9135689,34.9048301 86.3968266,40.8340058 C85.3856651,44.7867896 86.3069236,48.842121 89.1606019,53" id="Line-2" stroke="#FDB92D" stroke-width="5" stroke-linecap="round"></path>
+        <path d="M67.1606019,20 C71.1262576,24.0269157 72.7305153,27.7722584 71.9733749,31.2360282 C71.03717,35.5189839 65.9135689,34.9048301 64.3968266,40.8340058 C63.3856651,44.7867896 64.3069236,48.842121 67.1606019,53" id="Line-2" stroke="#FDB92D" stroke-width="5" stroke-linecap="round"></path>
+        <g id="Group" transform="translate(42.000000, 72.000000)">
+            <ellipse id="Oval" fill="#CCD1DE" cx="26" cy="13" rx="19" ry="13"></ellipse>
+            <path d="M12.0115645,18.5597474 L14.5491262,32.6045473 L5.78745375,32.5381621 L10.0707208,18.4467209 C10.2313385,17.9183078 10.7899083,17.6201507 11.3183214,17.7807683 C11.6772126,17.8898578 11.9448718,18.1906193 12.0115645,18.5597474 Z" id="Triangle" fill="#CCD1DE" transform="translate(10.168290, 23.544341) rotate(-120.000000) translate(-10.168290, -23.544341) "></path>
+            <circle id="Oval" fill="#00165A" cx="33" cy="14" r="2"></circle>
+            <g id="Oval-2" transform="translate(18.000000, 12.000000)" fill="#00165A">
+                <circle id="Oval" cx="2" cy="2" r="2"></circle>
+            </g>
+            <circle id="Oval" fill="#00165A" cx="27" cy="14" r="2"></circle>
+        </g>
+    </g>
+</svg>
