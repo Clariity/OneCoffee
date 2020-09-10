@@ -1,5 +1,5 @@
 import React, { useState, useContext } from "react";
-import { toast } from "react-toastify";
+import { ToastContainer, toast } from "react-toastify";
 import RoomContainer from "./RoomContainer";
 import FilterContainer from "./FilterContainer";
 import { StoreContext } from "../store/store";
@@ -103,6 +103,7 @@ const BodyContainer = () => {
       {showNewTableModal && (
         <NewTableModal setShowNewTableModal={setShowNewTableModal} addTable={addTable} />
       )}
+      <ToastContainer />
     </div>
   );
 };

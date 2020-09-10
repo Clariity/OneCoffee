@@ -1,16 +1,9 @@
-<<<<<<< HEAD
-import React, { useRef, useEffect } from 'react';
-import createWebexMeeting from '../api/createMeetingUtil';
 
-const TableContainer = ({ table }) => {
-  const pushToWebex = () => createWebexMeeting();
-=======
 import React, { useRef, useEffect, useContext } from "react";
 import { StoreContext } from "../store/store";
 
 const TableContainer = ({ roomIndex, tableNumber }) => {
   const { state } = useContext(StoreContext);
->>>>>>> 95e4919c93fad64ab796a49cbcac4c99356f089c
   const buttonDisabled = useRef(null);
 
   let room = state.roomData[roomIndex];
