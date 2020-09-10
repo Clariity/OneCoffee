@@ -1,5 +1,6 @@
 import React, { useState, useContext } from "react";
 import RoomContainer from "./RoomContainer";
+import FilterContainer from "./FilterContainer";
 import { StoreContext } from "../store/store";
 import FilterModal from "./modals/FilterModal";
 import NewTableModal from "./modals/NewTableModal";
@@ -25,13 +26,13 @@ const BodyContainer = () => {
     <div className="row">
       <div className="col-lg-3 dls-gray-04-bg">
         <div className="rooms flex flex-column">
-          <div>
+          <h3>
             Rooms
             <i
               className="icon dls-icon-plus-circle icon-hover search-icon"
               onClick={() => setShowNewTableModal(true)}
             />
-          </div>
+          </h3>
           {state.roomData.map((room, index) => (
             <button
               className="btn btn-secondary"
@@ -42,18 +43,28 @@ const BodyContainer = () => {
             </button>
           ))}
         </div>
+
         <div className="Table filters">
-          Table filters
-          <i
+        <h3>
+            Table Filters
+            <i
             className="icon dls-icon-filter icon-hover search-icon"
             onClick={() => setShowFilterModal(true)}
           />
+          </button>
+        </h3>
+           
+           {/*
+            map over filtersData - (name, value)
+            create a FilterContainer object for each of these
+            <FilterContainer />
+           */}
+
         </div>
       </div>
-      <div className="col-lg-9 dls-gray-01-bg pad-1">
-        <h1>
-          {activeRoom && state.roomData.find((room) => room.name === activeRoom).name}
-        </h1>
+      
+      <div className="col-lg-9">
+        {activeRoom && state.roomData.find((room) => room.name === activeRoom).name}
         <div className="dls-gray-01-bg">
           <RoomContainer
             className="dls-gray-01-bg"
