@@ -1,16 +1,37 @@
 import React, { useState, useContext } from "react";
 import RoomContainer from "./RoomContainer";
 import { StoreContext } from "../store/store";
+import FilterModal from "./modals/FilterModal";
+import NewTableModal from "./modals/NewTableModal";
 
 const BodyContainer = () => {
   const { state } = useContext(StoreContext);
   const [activeRoom, setActiveRoom] = useState();
+  const [showFilterModal, setShowFilterModal] = useState(false);
+  const [showNewTableModal, setShowNewTableModal] = useState(false);
+
+  function addTable(room, tableInfo) {
+    let index = room.split(":")[0];
+    let name = room.split(":")[1];
+    let newTables = state.roomData[index].tables;
+    newTables.push(tableInfo);
+    state.firebaseApp.firestore().collection("rooms").doc(name).update({
+      tables: newTables,
+    });
+    setShowNewTableModal(false);
+  }
 
   return (
     <div className="row">
       <div className="col-lg-3 dls-gray-04-bg">
         <div className="rooms flex flex-column">
-          Rooms
+          <div>
+            Rooms
+            <i
+              className="icon dls-icon-plus-circle icon-hover search-icon"
+              onClick={() => setShowNewTableModal(true)}
+            />
+          </div>
           {state.roomData.map((room, index) => (
             <button
               className="btn btn-secondary"
@@ -21,7 +42,13 @@ const BodyContainer = () => {
             </button>
           ))}
         </div>
-        <div className="Table filters">Table filters</div>
+        <div className="Table filters">
+          Table filters
+          <i
+            className="icon dls-icon-filter icon-hover search-icon"
+            onClick={() => setShowFilterModal(true)}
+          />
+        </div>
       </div>
       <div className="col-lg-9">
         {activeRoom && state.roomData.find((room) => room.name === activeRoom).name}
@@ -32,6 +59,10 @@ const BodyContainer = () => {
           />
         </div>
       </div>
+      {showFilterModal && <FilterModal setShowFilterModal={setShowFilterModal} />}
+      {showNewTableModal && (
+        <NewTableModal setShowNewTableModal={setShowNewTableModal} addTable={addTable} />
+      )}
     </div>
   );
 };
