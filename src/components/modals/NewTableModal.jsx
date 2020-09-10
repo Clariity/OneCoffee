@@ -64,7 +64,7 @@ export default function NewTableModal({ setShowNewTableModal, addTable }) {
       <div className="modal flex flex-align-center">
         <div className="container" role="dialog" ref={tableModalRef}>
           <header className="flex flex-align-center dls-dark-yellow-bg dls-white">
-            <h2 className="fluid text-align-center heading-3">New Table</h2>
+            <h2 className="fluid text-align-center font-light">New Table</h2>
             <button
               className="glyph dls-glyph-close glyph-lg focus-light"
               style={{ color: "#00165a" }}
@@ -75,15 +75,15 @@ export default function NewTableModal({ setShowNewTableModal, addTable }) {
           </header>
           <div className="card">
             <div className="pad-responsive-extra-lr">
-              <h2 className="heading-5 margin-3-b text-align-left pad-3-t">Table Name</h2>
+              <h3 className="margin-3-b text-align-left pad-3-t">Table Name</h3>
               <div data-toggle="inputfield" onChange={handleTableNameChange}>
                 <input id="inputDefault" className="form-control" placeholder="Table Name" />
               </div>
-              <h2 className="heading-5 margin-3-b text-align-left pad-3-t">Topic</h2>
+              <h3 className="margin-3-b text-align-left pad-3-t">Topic</h3>
               <div onChange={handleTopicChange}>
                 <input className="form-control" placeholder="Cooking, Football, Music, Gaming" />
               </div>
-              <h2 className="heading-5 margin-3-b text-align-left pad-3-t">Room</h2>
+              <h3 className="margin-3-b text-align-left pad-3-t">Room</h3>
               <div style={{ textAlign: "left" }} onChange={handleRadioChange}>
                 {state.roomData.map((room, index) => {
                   return (
@@ -93,7 +93,7 @@ export default function NewTableModal({ setShowNewTableModal, addTable }) {
                   );
                 })}
               </div>
-              <h2 className="heading-5 margin-3-b text-align-left pad-3-t">Location</h2>
+              <h3 className="margin-3-b text-align-left pad-3-t">Location</h3>
               <div style={{ textAlign: "left" }} onChange={handleRadioLocationChange}>
                 <span className="radio-selection-item">
                   <input type="radio" value="London" name="test" /> London
@@ -114,7 +114,7 @@ export default function NewTableModal({ setShowNewTableModal, addTable }) {
                   <input type="radio" value="India" name="test" /> India
                 </span>
               </div>
-              <h2 className="heading-5 margin-3-b text-align-left pad-3-t">Size Limit</h2>
+              <h3 className="margin-3-b text-align-left pad-3-t">Size Limit</h3>
               <div style={{ textAlign: "left" }}>
                 <i
                   className={`icon dls-icon-minus-circle icon-hover search-icon ${
