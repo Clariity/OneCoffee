@@ -4,8 +4,6 @@ import { StoreContext } from "../store/store";
 
 const RoomContainer = ({ roomIndex }) => {
   const { state } = useContext(StoreContext);
-
-  console.log(roomIndex, state.roomData[roomIndex]);
   return (
     <>
       <div className="RoomHeader dls-deep-blue-bg" />
